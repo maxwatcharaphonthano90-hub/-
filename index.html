@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ขอดูได้มั้ย 🥺</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fff4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 16px;
+      text-align: center;
+      width: 90%;
+      max-width: 320px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .cat {
+      font-size: 64px;
+    }
+
+    h2 {
+      margin: 10px 0 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    button {
+      flex: 1;
+      padding: 14px;
+      font-size: 20px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .yes {
+      background: #4cd964;
+      color: black;
+      font-weight: bold;
+    }
+
+    .no {
+      background: #ff3b30;
+      color: white;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="cat">🐱</div>
+    <h2>ขอดูได้มั้ย</h2>
+
+    <div class="buttons">
+      <button class="yes" onclick="yesClick()">YES</button>
+      <button class="no" id="noBtn">NO</button>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 200 - 100;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    function yesClick() {
+      document.body.innerHTML = `
+        <div style="
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          height:100vh;
+          font-family:sans-serif;
+          text-align:center;
+          background:#fff4f6;">
+          <div>
+            <h1>ได้เลยยย 😆</h1>
+            <p>ขอบคุณที่ใจดีนะ 💖</p>
+          </div>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
+
